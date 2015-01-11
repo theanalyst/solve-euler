@@ -12,7 +12,7 @@ def get_solutions(filename):
 
 def test_solutions():
     answers = get_solutions("solutions.txt")
-    for k, v in answers.iteritems():
+    for k, v in answers.items():
         assert str(globals()[k].solution()) == v
 
 if __name__ == "__main__":
