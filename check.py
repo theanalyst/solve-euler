@@ -13,7 +13,8 @@ def get_solutions(filename):
 def test_solutions():
     answers = get_solutions("solutions.txt")
     for k, v in answers.items():
-        assert str(globals()[k].solution()) == v
+        if k in globals():  # Check if solution is implemented
+            assert str(globals()[k].solution()) == v
 
 if __name__ == "__main__":
     check_solutions()
