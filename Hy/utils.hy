@@ -4,4 +4,4 @@
     (while true
       (yield a)
       (setv (, a b) (, b (+ a b)))))
-  (fibs 0 1))
+  (fib-gen 0 1))
