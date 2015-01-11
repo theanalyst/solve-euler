@@ -1,22 +1,16 @@
 from python import *
 
-def get_lines(filename):
-    with open(filename) as f:
-        yield f.readline().split()
 
-
-def get_solutions(filename):
-    return {k: v for k, v in get_lines(filename)}
+def process_solution(filename):
+    with open(filename, 'r') as f:
+        solutions = {k: v for k, v in (line.split() for line in f)}
+    return solutions
 
 
 def test_python_solutions():
     ''' answers is a dictionary containing key value of format
     p1 : <answer to problem 1>'''
-    answers = get_solutions("solutions.txt")
+    answers = process_solutions("solutions.txt")
     for k, v in answers.items():
         if k in globals():  # Check if solution is implemented
             assert str(globals()[k].solution()) == v
-
-
-if __name__ == "__main__":
-    test_python_solutions()
