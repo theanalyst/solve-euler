@@ -10,7 +10,7 @@ def process_solution(filename):
 def test_python_solutions():
     ''' answers is a dictionary containing key value of format
     p1 : <answer to problem 1>'''
-    answers = process_solutions("solutions.txt")
+    answers = process_solution("solutions.txt")
     for k, v in answers.items():
         if k in globals():  # Check if solution is implemented
             assert str(globals()[k].solution()) == v
