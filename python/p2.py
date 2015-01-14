@@ -1,6 +1,6 @@
-from itertools import takewhile, ifilter
+from itertools import takewhile
 from utils import fibs, is_even
 
 
 def solution():
-    return sum(ifilter(is_even, takewhile(lambda x: x < 4000000, fibs())))
+    return sum(filter(is_even, takewhile(lambda x: x < 4000000, fibs())))
