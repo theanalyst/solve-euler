@@ -5,3 +5,7 @@ def fibs():
     while True:
         yield a
         a, b = b, a + b
+
+
+def is_even(x):
+    return x % 2 == 0
