@@ -7,8 +7,12 @@ python:
   - "3.4"
 cache:
   directories:
-  - $HOME/.pip-cache
+  - $PWD/wheelhouse
+env:
+  global:
+    - export PIP_FIND_LINKS=$PWD/wheelhouse
 install:
-  - pip install -r requirements.txt --download-cache $HOME/.pip-cache
+  - pip wheel -r requirements.txt
+  - pip install -r requirements.txt
 # command to run tests
 script: py.test check.py check_hy.py
