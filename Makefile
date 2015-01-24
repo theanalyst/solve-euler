@@ -7,4 +7,7 @@ py:
 hy:
 	py.test check_hy.py
 
-test: py hy
+hs:
+	cd haskell && cabal clean &&  cabal configure && cabal build
+
+test: py hy hs

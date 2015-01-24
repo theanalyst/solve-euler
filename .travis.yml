@@ -1,7 +1,6 @@
 install:
-  - sudo apt-get update && sudo apt-get install -y python python-pip ghc cabal-install
+  - sudo apt-get update && sudo apt-get install -y python python-pip ghc cabal-install libghc-base-unicode-symbols-dev
   - sudo pip install pytest hy
 # command to run tests
 script:
-  - py.test check.py check_hy.py
-  - cabal build
+  - make test
