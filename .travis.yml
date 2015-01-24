@@ -3,4 +3,4 @@ install:
   - sudo pip install pytest hy
 # command to run tests
 script:
-  - make test
+  - make -j 2 test
