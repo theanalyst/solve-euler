@@ -7,6 +7,8 @@ import Euler.P6
 import Euler.P7
 -- Replace by something more sensible as we improve
 
+import Text.Printf
+
 main :: IO ()
 main = do
   print Euler.P1.solution
@@ -14,5 +16,5 @@ main = do
   print Euler.P3.solution
   print Euler.P4.solution
   print Euler.P5.solution
-  print Euler.P6.solution
+  printf "%d\n" (floor Euler.P6.solution :: Int)
   print Euler.P7.solution
