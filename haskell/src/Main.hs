@@ -3,6 +3,7 @@ import Euler.P2
 import Euler.P3
 import Euler.P4
 import Euler.P5
+import Euler.P6
 -- Replace by something more sensible as we improve
 
 main :: IO ()
@@ -12,3 +13,4 @@ main = do
   print Euler.P3.solution
   print Euler.P4.solution
   print Euler.P5.solution
+  print Euler.P6.solution
