@@ -7,15 +7,18 @@ Solve Euler
 An attempt to solve project euler in various languages, learning them
 in the process. (Starting with python)
 
-Current Setup
--------------
+Test Setup
+----------
 
-Solutions are tested via travis. For python & Hy ``py.test`` 
-module is used to test the solutions. The scripts ``check.py`` 
-as well as ``check_hy.py`` verify that implemented solutions 
-in python & Hy. All solution files are expected 
-to follow p<problem-number> format and implement a method solution 
-which should return the number. This is checked against the known values 
-in ``solutions.txt``
+Solutions are also tested in travis with expected values in
+`solutions.txt`. Though Travis doesn't support multilanguage builds,
+since python is installed in Travis environments by default, a haskell
+environment with some pip packages are used to test a multi
+python-hy-haskell environment. Checkout `travis.yml` for the gory
+details on how this is done.
 
-Feel free to submit improvements in solutions.
+Tests in python and Hy currently call the `solution` method for each
+problem and compare against the values, the Haskell tests are a hack
+atm currently printing all the values from `Euler` binary and
+comparing them (externally) againstthe expected solutions.txt
+
