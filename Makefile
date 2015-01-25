@@ -9,5 +9,6 @@ hy:
 
 hs:
 	cd haskell && cabal clean &&  cabal configure && cabal build
+	./test_haskell.sh
 
 test: py hy hs
