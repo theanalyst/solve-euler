@@ -1,7 +1,8 @@
 Solve Euler
 ===============
 
-[![Build Status](https://travis-ci.org/theanalyst/solve-euler.svg)](https://travis-ci.org/theanalyst/solve-euler)
+[![Build Status](https://travis-ci.org/theanalyst/solve-euler.svg)]
+(https://travis-ci.org/theanalyst/solve-euler.svg?branch=master)
 
 An attempt to solve project euler in various languages, learning them
 in the process. (Starting with python)
