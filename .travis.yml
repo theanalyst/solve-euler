@@ -1,6 +1,9 @@
+language: haskell
+ghc: 7.6
 install:
-  - sudo apt-get update && sudo apt-get install -y python python-pip ghc cabal-install libghc-base-unicode-symbols-dev
+  - sudo apt-get update && sudo apt-get install -y python-pip
   - sudo pip install pytest hy
-# command to run tests
+  - cabal install base-unicode-symbols
+  # command to run tests
 script:
   - make -j 2 test
