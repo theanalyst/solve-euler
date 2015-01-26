@@ -5,9 +5,11 @@ import Euler.P4
 import Euler.P5
 import Euler.P6
 import Euler.P7
+import Euler.P8
 -- Replace by something more sensible as we improve
 
 import Text.Printf
+import Control.Monad
 
 main :: IO ()
 main = do
@@ -18,3 +20,4 @@ main = do
   print Euler.P5.solution
   printf "%d\n" (floor Euler.P6.solution :: Int)
   print Euler.P7.solution
+  print Euler.P8.solution
