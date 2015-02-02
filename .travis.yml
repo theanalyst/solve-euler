@@ -1,8 +1,16 @@
+sudo: false
 language: haskell
 ghc: 7.6
+env:
+  global:
+    - PATH=$PATH:~/.local/bin
+cache:
+  directories:
+    - $HOME/.pip-cache
 install:
-  - sudo apt-get update && sudo apt-get install -y python-pip
-  - sudo pip install pytest hy
+  - wget https://bootstrap.pypa.io/get-pip.py
+  - python get-pip.py --user
+  - pip install pytest hy --download-cache $HOME/.pip-cache --user
   - cd haskell && cabal install --only-dependencies && cd ..
   # command to run tests
 script:
