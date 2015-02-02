@@ -1,4 +1,5 @@
 #!/bin/bash
+cp etc/p8.txt haskell/dist/build/Euler/
 haskell/dist/build/Euler/Euler > /tmp/Euler.out
 
 # hacky way of testing atm, hopefully this should be replaced soon

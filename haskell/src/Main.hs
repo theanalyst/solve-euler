@@ -20,4 +20,5 @@ main = do
   print Euler.P5.solution
   printf "%d\n" (floor Euler.P6.solution :: Int)
   print Euler.P7.solution
-  print Euler.P8.solution
+  s <- Euler.P8.solution
+  print s
