@@ -20,5 +20,5 @@ fileToStr file = do
 
 -- There should probably be a better way of doing this
 -- Need to understand monads better
-solution = maximum  <$> map (foldl (*) 1) <$> (\x -> (partitionIndex x 13 1)) <$> strTointList <$> fileToStr "p8.txt"
+solution = maximum  <$> map (foldl (*) 1) <$> (\x -> (partitionIndex x 13 1)) <$> strTointList <$> fileToStr "etc/p8.txt"
 
