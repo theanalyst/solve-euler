@@ -11,4 +11,7 @@ hs:
 	cd haskell && cabal clean &&  cabal configure && cabal build
 	./test_haskell.sh
 
-test: py hy hs
+go:
+	GOPATH=$(CURDIR)/Go go test euler/...
+
+test: py hy hs go
