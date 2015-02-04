@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/theanalyst/solve_euler/p1"
+	"euler/p1"
 	"fmt"
 )
 

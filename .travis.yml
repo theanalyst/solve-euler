@@ -4,6 +4,7 @@ ghc: 7.6
 env:
   global:
     - PATH=$PATH:~/.local/bin
+    - GOPATH=$GOPATH:~/build/theanalyst/solve-euler/Go
 cache:
   directories:
     - $HOME/.pip-cache
@@ -15,3 +16,4 @@ install:
   # command to run tests
 script:
   - make -j 2 test
+  - go test euler/...
