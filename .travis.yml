@@ -14,4 +14,4 @@ install:
   - cd haskell && cabal install --only-dependencies && cd ..
   # command to run tests
 script:
-  - make -j 2 test
+  - time make -j 2 test
