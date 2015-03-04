@@ -8,7 +8,7 @@ import (
 	"fmt"
 )
 
-func main(){
+func main() {
 	fmt.Println(p1.Solution())
 	fmt.Println(p2.Solution())
 	fmt.Println(p3.Solution())
