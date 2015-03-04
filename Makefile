@@ -12,6 +12,6 @@ hs:
 	./test_haskell.sh
 
 go:
-	GOPATH=$(CURDIR)/Go go test euler/...
+	GOPATH=$(CURDIR)/Go go test euler
 
 test: py hy hs go
