@@ -5,6 +5,7 @@ import (
 	"euler/p2"
 	"euler/p3"
 	"euler/p4"
+	"euler/p5"
 	"testing"
 )
 
@@ -20,4 +21,5 @@ func TestSolutions(t *testing.T) {
 	assertSolution(2, p2.Solution(), 4613732, t)
 	assertSolution(3, p3.Solution(), 6857, t)
 	assertSolution(4, p4.Solution(), 906609, t)
+	assertSolution(5, p5.Solution(), 232792560, t)
 }

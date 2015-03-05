@@ -13,3 +13,15 @@ func PrimeFactors(n int) []int {
 	}
 	return primefactors
 }
+
+func GCD(a int, b int) int {
+	if b == 0 {
+		return a
+	} else {
+		return GCD(b, a%b)
+	}
+}
+
+func LCM(a int, b int) int {
+	return a * b / GCD(a, b)
+}
