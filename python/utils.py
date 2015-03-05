@@ -1,5 +1,5 @@
 from math import sqrt
-from ._compat import xrange
+from _compat import xrange
 
 
 def fibs():

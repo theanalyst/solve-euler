@@ -1,5 +1,5 @@
 from itertools import takewhile
-from .utils import fibs, is_even
+from utils import fibs, is_even
 
 
 def solution():

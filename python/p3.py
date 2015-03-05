@@ -1,4 +1,4 @@
-from .utils import prime_factors
+from utils import prime_factors
 
 n = 600851475143
 
