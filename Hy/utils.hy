@@ -28,3 +28,9 @@
 (defn factors [num]
   "Lists all the factors including 1 and number"
   (+ (list (filter (partial factor? num) (range 1 (int (inc (/ num 2)))))) [num]))
+
+(defn gcd [a b]
+  (if (= b 0) a (gcd b (% a b))))
+
+(defn lcm [a b]
+  (/ (* a b) (gcd a b)))
