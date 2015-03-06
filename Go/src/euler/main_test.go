@@ -7,6 +7,7 @@ import (
 	"euler/p4"
 	"euler/p5"
 	"euler/p6"
+	"euler/p7"
 	"io/ioutil"
 	"strconv"
 	"strings"
@@ -27,6 +28,8 @@ func TestSolutions(t *testing.T) {
 	assertSolution(4, p4.Solution(), m["p4"], t)
 	assertSolution(5, p5.Solution(), m["p5"], t)
 	assertSolution(6, p6.Solution(), m["p6"], t)
+	assertSolution(7, p7.Solution(), m["p7"], t)
+
 }
 
 func parseTextFile(filename string) map[string]int {
