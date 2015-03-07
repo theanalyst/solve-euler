@@ -8,6 +8,7 @@ import (
 	"euler/p5"
 	"euler/p6"
 	"euler/p7"
+	"euler/p8"
 	"fmt"
 )
 
@@ -19,4 +20,5 @@ func main() {
 	fmt.Println(p5.Solution())
 	fmt.Println(p6.Solution())
 	fmt.Println(p7.Solution())
+	fmt.Println(p8.Solution())
 }

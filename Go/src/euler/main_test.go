@@ -8,6 +8,7 @@ import (
 	"euler/p5"
 	"euler/p6"
 	"euler/p7"
+	"euler/p8"
 	"io/ioutil"
 	"strconv"
 	"strings"
@@ -29,6 +30,7 @@ func TestSolutions(t *testing.T) {
 	assertSolution(5, p5.Solution(), m["p5"], t)
 	assertSolution(6, p6.Solution(), m["p6"], t)
 	assertSolution(7, p7.Solution(), m["p7"], t)
+	assertSolution(8, p8.Solution(), m["p8"], t)
 
 }
 
