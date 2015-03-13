@@ -12,6 +12,7 @@ install:
   - python get-pip.py --user
   - pip install pytest hy --download-cache $HOME/.pip-cache --user
   - cd haskell && cabal configure --enable-tests && cabal install --only-dependencies --enable-tests && cd ..
+  - cabal install HUnit tasty tasty-hunit 
   # command to run tests
 script:
   - time make -j 2 test
