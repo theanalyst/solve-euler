@@ -16,10 +16,22 @@ build-type:          Simple
 -- extra-source-files:  
 cabal-version:       >=1.10
 
-executable Euler
-  main-is:             Main.hs
-  -- other-modules:       
-  -- other-extensions:    
-  build-depends:       base >=4.2 && <4.7, base-unicode-symbols
-  hs-source-dirs:      src
+-- Bit of fooling around here
+-- We're not exposing anything actually, we'll just run the test Suite
+
+library 
+  hs-source-dirs: src
   default-language:    Haskell2010
+  build-depends:       base >=4.2 && <4.7, base-unicode-symbols
+
+test-Suite Tests
+  main-is:             Test.hs
+  Type:                exitcode-stdio-1.0
+  build-depends:       base >= 4.2, HUnit,
+                       base-unicode-symbols,
+                       tasty,
+                       tasty-hunit
+  hs-source-dirs:      test, src
+  default-language:    Haskell2010
+
+--  

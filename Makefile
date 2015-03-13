@@ -8,8 +8,8 @@ hy:
 	py.test check_hy.py
 
 hs:
-	cd haskell && cabal clean &&  cabal configure && cabal build
-	./test_haskell.sh
+	cd haskell && cabal clean &&  cabal configure --enable-tests && cabal test
+
 
 go:
 	GOPATH=$(CURDIR)/Go go test euler
