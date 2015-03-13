@@ -11,8 +11,7 @@ install:
   - wget https://bootstrap.pypa.io/get-pip.py
   - python get-pip.py --user
   - pip install pytest hy --download-cache $HOME/.pip-cache --user
-  - cabal install HUnit tasty tasty-hunit 
-  - cd haskell && cabal configure --enable-tests && cabal install --only-dependencies --enable-tests && cd ..
+  - cd haskell && cabal install -j --only-dependencies --enable-tests && cabal configure --enable-tests && cd ..
 
   # command to run tests
 script:
