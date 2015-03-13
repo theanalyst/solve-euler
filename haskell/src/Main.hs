@@ -6,6 +6,7 @@ import Euler.P5
 import Euler.P6
 import Euler.P7
 import Euler.P8
+import Euler.P9
 -- Replace by something more sensible as we improve
 
 import Text.Printf
@@ -22,3 +23,4 @@ main = do
   print Euler.P7.solution
   s <- Euler.P8.solution
   print s
+  print Euler.P9.solution
