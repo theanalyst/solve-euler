@@ -7,12 +7,12 @@ env:
 cache:
   directories:
     - $HOME/.pip-cache
+    - $HOME/.cabal/packages
 install:
   - wget https://bootstrap.pypa.io/get-pip.py
   - python get-pip.py --user
   - pip install pytest hy --download-cache $HOME/.pip-cache --user
-  - cd haskell && cabal install -j --only-dependencies --enable-tests && cabal configure --enable-tests && cd ..
-
+  - cd haskell && cabal sandbox init && cabal install -j --only-dependencies --enable-tests --prefix $HOME/.cabal/packages && cabal configure --enable-tests && cd ..
   # command to run tests
 script:
   - time make -j 2 test
