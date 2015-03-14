@@ -7,7 +7,7 @@ env:
 cache:
   directories:
     - $HOME/.pip-cache
-    - $TRAVIS_BUILD_DIR/haskell/.cabal-sanbox
+    - $TRAVIS_BUILD_DIR/haskell/.cabal-sandbox
 install:
   - wget https://bootstrap.pypa.io/get-pip.py
   - python get-pip.py --user
