@@ -24,5 +24,9 @@ unitTests = testGroup "Unit Tests"
               testCase "P5" $ (Answer.lst !! 5) @?= Euler.P5.solution,
               testCase "P6" $ (Answer.lst !! 6) @?= Euler.P6.solution,
               testCase "P7" $ (Answer.lst !! 7) @?= Euler.P7.solution,
-              testCase "P8" $ (Answer.lst !! 8) @?= Euler.P8.solution,
-              testCase "P9" $ (Answer.lst !! 9) @?= Euler.P9.solution]
+              testCaseSteps "P8" $ \step -> do
+                step "Asserting IO Equals"
+                v <- Euler.P8.solution
+                v @?= Answer.lst !! 8,
+              testCase "P9" $ (Answer.lst !! 9) @?= Euler.P9.solution
+            ]
