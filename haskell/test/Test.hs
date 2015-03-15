@@ -10,6 +10,7 @@ import Euler.P6
 import Euler.P7
 import Euler.P8
 import Euler.P9
+import Euler.P10
 
 main :: IO ()
 main = defaultMain tests
@@ -28,5 +29,6 @@ unitTests = testGroup "Unit Tests"
                 step "Asserting IO Equals"
                 v <- Euler.P8.solution
                 v @?= Answer.lst !! 8,
-              testCase "P9" $ (Answer.lst !! 9) @?= Euler.P9.solution
+              testCase "P9" $ (Answer.lst !! 9) @?= Euler.P9.solution,
+              testCase "P10" $ (Answer.lst !! 10) @?= Euler.P10.solution
             ]
