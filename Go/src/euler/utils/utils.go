@@ -14,6 +14,25 @@ func PrimeFactors(n int) []int {
 	return primefactors
 }
 
+func IsPrime(n int) bool {
+	switch {
+	case n == 2 || n == 3:
+		return true
+	case n%2 == 0: // Filtering out even no
+		return false
+	case (n+1)%6 == 0 || (n-1)%6 == 0:
+		// Every prime no = 6k ± 1
+		for i := 3; i <= int(math.Sqrt(float64(n))); i += 2 {
+			if n%i == 0 {
+				return false
+			}
+		}
+		return true
+	default:
+		return false
+	}
+}
+
 func GCD(a int, b int) int {
 	if b == 0 {
 		return a

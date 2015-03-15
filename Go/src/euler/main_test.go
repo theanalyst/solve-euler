@@ -2,6 +2,7 @@ package main
 
 import (
 	"euler/p1"
+	"euler/p10"
 	"euler/p2"
 	"euler/p3"
 	"euler/p4"
@@ -33,6 +34,7 @@ func TestSolutions(t *testing.T) {
 	assertSolution(7, p7.Solution(), m["p7"], t)
 	assertSolution(8, p8.Solution(), m["p8"], t)
 	assertSolution(9, p9.Solution(), m["p9"], t)
+	assertSolution(10, p10.Solution(), m["p10"], t)
 
 }
 
