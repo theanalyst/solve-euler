@@ -13,4 +13,10 @@ hs:
 go:
 	GOPATH=$(CURDIR)/Go go test euler
 
-test: py hy hs go
+CCFLAGS = -Wall
+SRC = $(wildcard cpp/*.cc)
+CXX = g++
+cpptest: $(SRC)
+	$(CXX) -o $@ $^ $(CCFLAGS)
+
+test: py hy hs go cpptest
